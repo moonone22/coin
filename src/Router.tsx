@@ -13,10 +13,10 @@ import {
 function Router() {
     
     return (
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <BrowserRouter>
             <Routes>
                 <Route path="/:coinId/*" element={<Coin />}/>
-                <Route path="/" element={<Coins/>}/>  
+                Route path={`${process.env.PUBLIC_URL}/`} element={<Coins/>}/>  
             </Routes>
         </BrowserRouter>
     )
